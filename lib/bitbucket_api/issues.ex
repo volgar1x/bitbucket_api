@@ -1,9 +1,10 @@
 defmodule BitbucketApi.Issues do
+  import BitbucketApi
+
   def find(user, repo, filters \\ [], options \\ []) do
-    hackney = BitbucketApi.to_hackney_options(options)
+    hackney = to_hackney_options(options)
+    params = params_to_string(filters)
 
-    params = BitbucketApi.params_to_string(filters)
-
-    BitbucketApi.get("1.0/repositories/#{user}/#{repo}/issues#{params}", [], [hackney: hackney]).body
+    get("1.0/repositories/#{user}/#{repo}/issues#{params}", [], [hackney: hackney]).body
   end
 end

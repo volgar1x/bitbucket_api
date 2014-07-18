@@ -14,7 +14,7 @@ defmodule BitbucketApi.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: []]
+    [applications: [:hackney]]
   end
 
   # Dependencies can be hex.pm packages:
