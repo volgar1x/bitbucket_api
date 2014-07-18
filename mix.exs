@@ -7,6 +7,8 @@ defmodule BitbucketApi.Mixfile do
       version: "0.0.1",
       elixir: "~> 0.13.3",
       deps: deps,
+      description: description,
+      package: package,
     ]
   end
 
@@ -32,6 +34,24 @@ defmodule BitbucketApi.Mixfile do
       { :hackney, github: "benoitc/hackney", ref: "cf90543f9cc21ffea34d71035521b0102b8555cf" },
       { :jsex, "~> 2.0.0" },
       { :jsx, "~> 2.0" },
+    ]
+  end
+
+  defp description do
+    """
+    Create hooks for Bitbucket.
+    """
+  end
+
+  defp package do
+    [
+      files: ~w(lib LICENSE README.md mix.exs),
+      contributors: ["Antoine CHAUVIN"],
+      licenses: "The MIT License (MIT)",
+      links: %{
+        "Github" => "https://github.com/Blackrush/bitbucket_api",
+        "Docs" => "https://blackrush.github.io/bitbucket_api/",
+      }
     ]
   end
 end
