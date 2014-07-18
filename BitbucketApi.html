@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BitbucketApi</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+    <script type="text/javascript" charset="utf-8">
+      relpath = '';
+      if (relpath != '') relpath += '/';
+    </script>
+
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+  </head>
+
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+
+    <div id="content">
+      <div class="breadcrumbs">bitbucket_api v0.0.1 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="BitbucketApi.html">BitbucketApi</a></div>
+
+      <h1>
+        BitbucketApi
+        
+      </h1>
+
+      
+
+      <ul class="summary_links">
+        
+        
+          <li><a href="#summary">Summary</a></li>
+        
+        
+          <li><a href="#functions_details">Functions</a></li>
+        
+        
+        
+        
+      </ul>
+
+      
+
+      
+
+      
+
+      
+        <h2 id="summary">Summary<div class="detail_header_links"><a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></div></h2>
+        <table class="summary">
+          <tr>
+  <td class="summary_signature"><a href="#start/0">start()</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#params_to_string/1">params_to_string(params)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#process_headers/1">process_headers(headers)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#process_request_body/1">process_request_body(body)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#process_request_headers/1">process_request_headers(headers)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#process_response_body/1">process_response_body(body)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#process_response_chunk/1">process_response_chunk(chunk)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#process_status_code/1">process_status_code(status_code)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#process_url/1">process_url(url)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#to_hackney_options/1">to_hackney_options(options)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#transformer/1">transformer(target)</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#delete/3">delete(url, headers \\ [], options \\ [])</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#get/3">get(url, headers \\ [], options \\ [])</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#head/3">head(url, headers \\ [], options \\ [])</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#options/3">options(url, headers \\ [], options \\ [])</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#patch/4">patch(url, body, headers \\ [], options \\ [])</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#post/4">post(url, body, headers \\ [], options \\ [])</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#put/4">put(url, body, headers \\ [], options \\ [])</a></td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#request/5">request(method, url, body \\ &quot;&quot;, headers \\ [], options \\ [])</a></td>
+  
+    <td class="summary_synopsis"><p>Sends an HTTP request.
+Args:
+  * method - HTTP method, atom (:get, :head, :post, :put, :delete, etc.)
+  * url - URL, binary string or char list
+  * body - request body, binary string or char list
+  * headers - HTTP headers, orddict (eg. [{:Accept, &quot;application/json&quot;}])
+  * options - orddict of options
+Options:
+  * timeout - timeout in ms, integer
+Returns HTTPoison.Response if successful.
+Raises  HTTPoison.HTTPError if failed</p>
+</td>
+  
+</tr>
+
+        </table>
+      
+
+      
+
+      
+        <div id="functions_details" class="details_list">
+          <h2>Functions</h2>
+          <div class="detail">
+  <div class="detail_header" id="delete/3">
+    <span class="signature"><strong>delete(url, headers \\ [], options \\ [])</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#delete/3" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="get/3">
+    <span class="signature"><strong>get(url, headers \\ [], options \\ [])</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#get/3" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="head/3">
+    <span class="signature"><strong>head(url, headers \\ [], options \\ [])</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#head/3" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="options/3">
+    <span class="signature"><strong>options(url, headers \\ [], options \\ [])</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#options/3" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="params_to_string/1">
+    <span class="signature"><strong>params_to_string(params)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#params_to_string/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="patch/4">
+    <span class="signature"><strong>patch(url, body, headers \\ [], options \\ [])</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#patch/4" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="post/4">
+    <span class="signature"><strong>post(url, body, headers \\ [], options \\ [])</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#post/4" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="process_headers/1">
+    <span class="signature"><strong>process_headers(headers)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#process_headers/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="process_request_body/1">
+    <span class="signature"><strong>process_request_body(body)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#process_request_body/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="process_request_headers/1">
+    <span class="signature"><strong>process_request_headers(headers)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#process_request_headers/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="process_response_body/1">
+    <span class="signature"><strong>process_response_body(body)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#process_response_body/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="process_response_chunk/1">
+    <span class="signature"><strong>process_response_chunk(chunk)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#process_response_chunk/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="process_status_code/1">
+    <span class="signature"><strong>process_status_code(status_code)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#process_status_code/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="process_url/1">
+    <span class="signature"><strong>process_url(url)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#process_url/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="put/4">
+    <span class="signature"><strong>put(url, body, headers \\ [], options \\ [])</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#put/4" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="request/5">
+    <span class="signature"><strong>request(method, url, body \\ &quot;&quot;, headers \\ [], options \\ [])</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#request/5" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"><p>Sends an HTTP request.
+Args:
+  * method - HTTP method, atom (:get, :head, :post, :put, :delete, etc.)
+  * url - URL, binary string or char list
+  * body - request body, binary string or char list
+  * headers - HTTP headers, orddict (eg. [{:Accept, &quot;application/json&quot;}])
+  * options - orddict of options
+Options:
+  * timeout - timeout in ms, integer
+Returns HTTPoison.Response if successful.
+Raises  HTTPoison.HTTPError if failed.</p>
+</div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="start/0">
+    <span class="signature"><strong>start()</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#start/0" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="to_hackney_options/1">
+    <span class="signature"><strong>to_hackney_options(options)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#to_hackney_options/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+<div class="detail">
+  <div class="detail_header" id="transformer/1">
+    <span class="signature"><strong>transformer(target)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#transformer/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+  <div class="docstring"></div>
+  
+</div>
+
+        </div>
+      
+
+      
+
+      
+    </div>
+  </body>
+</html>
