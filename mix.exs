@@ -34,6 +34,8 @@ defmodule BitbucketApi.Mixfile do
       { :hackney, github: "benoitc/hackney", ref: "cf90543f9cc21ffea34d71035521b0102b8555cf" },
       { :jsex, "~> 2.0.0" },
       { :jsx, "~> 2.0" },
+      { :ex_doc, github: "elixir-lang/ex_doc", ref: "4a6391bf2d6dacec8c6b52ef2506fb5607eb894c" },
+      # { :markdown, github: "devinus/markdown", ref: "5f61d6be25bec730a361d82a23d423f4a29bc67a" },
     ]
   end
 
@@ -47,7 +49,7 @@ defmodule BitbucketApi.Mixfile do
     [
       files: ~w(lib LICENSE README.md mix.exs),
       contributors: ["Antoine CHAUVIN"],
-      licenses: "The MIT License (MIT)",
+      licenses: ["The MIT License (MIT)"],
       links: %{
         "Github" => "https://github.com/Blackrush/bitbucket_api",
         "Docs" => "https://blackrush.github.io/bitbucket_api/",
