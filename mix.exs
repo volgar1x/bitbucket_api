@@ -4,8 +4,8 @@ defmodule BitbucketApi.Mixfile do
   def project do
     [
       app: :bitbucket_api,
-      version: "0.0.1",
-      elixir: "~> 0.13.3",
+      version: "0.0.2",
+      elixir: "~> 0.14.3",
       deps: deps,
       description: description,
       package: package,
@@ -16,7 +16,7 @@ defmodule BitbucketApi.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:hackney]]
+    [applications: ~w(hackney)a]
   end
 
   # Dependencies can be hex.pm packages:
@@ -30,11 +30,11 @@ defmodule BitbucketApi.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      { :httpoison, github: "edgurgel/httpoison", tag: "0.1.1" },
+      { :httpoison, "~> 0.3.0" },
       { :hackney, github: "benoitc/hackney", ref: "cf90543f9cc21ffea34d71035521b0102b8555cf" },
       { :jsex, "~> 2.0.0" },
       { :jsx, "~> 2.0" },
-      { :ex_doc, github: "elixir-lang/ex_doc", ref: "4a6391bf2d6dacec8c6b52ef2506fb5607eb894c" },
+      { :ex_doc, github: "elixir-lang/ex_doc" },
       # { :markdown, github: "devinus/markdown", ref: "5f61d6be25bec730a361d82a23d423f4a29bc67a" },
     ]
   end
